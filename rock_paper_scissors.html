@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+  }
+  p{
+    font-size: 40px;
+    font-weight: bolder;
+  }
+
+  button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    background-color: blue;
+    color: white;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(82, 81, 81);
+    border-radius: 6px;
+  }
+  button:hover{
+    background-color: brown;
+    border-width: 1px;
+    cursor: pointer;
+    border-style: solid;
+    border-color: blue;
+    opacity: 0.8;
+  }
+  button:active{
+    background-color: green;
+    border-width: 1px;
+    cursor: pointer;
+    border-style: solid;
+    border-color: gray;
+    opacity: 0.8;
+  }
+</style>
+<body>
+  <p>
+    Rock - Paper - Scissors
+  </p>
+  <button onclick="
+    const rock = 1, paper = 2, scissors = 3;
+    const randomNum = Math.floor(Math.random() * 3) + 1;
+    //gets a random number with math.round between 0 to 0.9 and uses math.floor to round it to the closest whole number
+    let computerMove = randomNum;
+    let result = '';
+    if (computerMove === 1)
+    {
+       computerMove = 'rock';
+       result = 'Tie.';
+    }
+    else if (computerMove === 2)
+    {
+       computerMove = 'paper';
+       result = 'You Lose.';
+    }
+    else
+    {
+       computerMove = 'scissors';
+       result = 'You Win.';
+    }
+    alert(`You choosed Rock. The Computer choosed ${computerMove}. ${result}`);
+  ">
+    Rock
+  </button>
+  
+  <button onclick="
+    rock = 1, paper = 2, scissors = 3;
+    randomNum = Math.floor(Math.random() * 3) + 1;
+    computerMove = randomNum;
+    result = '';
+    if (computerMove === 1)
+    {
+       computerMove = 'rock';
+       result = 'You Win.';
+    }
+    else if (computerMove === 2)
+    {
+       computerMove = 'paper';
+       result = 'Tie.';
+    }
+    else
+    {
+       computerMove = 'scissors';
+       result = 'You Lose.';
+    }
+    alert(`You choosed Paper. The Computer choosed ${computerMove}. ${result}`);
+  ">
+    Paper
+  </button>
+
+
+  <button onclick="
+    rock = 1, paper = 2, scissors = 3;
+    randomNum = Math.floor(Math.random() * 3) + 1;
+    computerMove = randomNum;
+    result = '';
+    if (computerMove === 1)
+    {
+       computerMove = 'rock';
+       result = 'You Lose.';
+    }
+    else if (computerMove === 2)
+    {
+       computerMove = 'paper';
+       result = 'You Win.';
+    }
+    else
+    {
+       computerMove = 'scissors';
+       result = 'Tie.';
+    }
+    alert(`You choosed Scissors. The Computer choosed ${computerMove}. ${result}`);
+  ">
+    Scissors
+  </button>
+  <script>
+  </script>
+</body>
+</html>
